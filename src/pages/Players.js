@@ -1,28 +1,37 @@
 import { Player } from "@/components";
 import { players } from "@/utils/players";
-import { useState } from "react";
 
-const Players = () => {
-  const [score, setScore] = useState(players);
+const Players = ({ score, setScore }) => {
+  const scoreUpdaterSorted = score.sort((a, b) => {
+    return b.playerScore - a.playerScore;
+  });
 
-  function increaseScore({ index }) {
+  function increaseScore(index) {
     const scoreUpdater = [...score];
+    console.log("index: ", index);
+    console.log("scoreUpdater: ", scoreUpdater);
     scoreUpdater[index].playerScore += 1;
-    setScore(scoreUpdater);
+    const scoreUpdaterSorted = scoreUpdater.sort((a, b) => {
+      return b.playerScore - a.playerScore;
+    });
+    setScore(scoreUpdaterSorted);
   }
 
-  function decreaseScore({ index }) {
+  function decreaseScore(index) {
     const scoreUpdater = [...score];
     scoreUpdater[index].playerScore -= 1;
-    setScore(scoreUpdater);
+    const scoreUpdaterSorted = scoreUpdater.sort((a, b) => {
+      return b.playerScore - a.playerScore;
+    });
+    setScore(scoreUpdaterSorted);
   }
 
   return (
-    <div>
-      {score.map((player, index) => {
+    <div className="Scoreboard">
+      {score.map((aScore, index) => {
         return (
           <Player
-            player={player}
+            aScore={aScore}
             index={index}
             increaseScore={increaseScore}
             decreaseScore={decreaseScore}

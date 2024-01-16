@@ -1,11 +1,26 @@
-export function Player({ player, index, increaseScore, decreaseScore }) {
+import { PlusIcon, MinusIcon } from "../utils/icons";
+
+export function Player({ aScore, index, increaseScore, decreaseScore }) {
   return (
     <div className="player" key={index}>
-      <p>{player.playerName}</p>
-      <div>
-        <button onClick={() => decreaseScore(index)}>-</button>
-        <span>{player.playerScore}</span>
-        <button onClick={() => increaseScore(index)}>+</button>
+      <p>{aScore.playerName}</p>
+      <div className="playerScore">
+        <button
+          onClick={() => {
+            console.log("checking from Player index :", index);
+            decreaseScore(index);
+          }}
+        >
+          <MinusIcon />
+        </button>
+        <span>{aScore.playerScore}</span>
+        <button
+          onClick={() => {
+            increaseScore(index);
+          }}
+        >
+          <PlusIcon />
+        </button>
       </div>
     </div>
   );
