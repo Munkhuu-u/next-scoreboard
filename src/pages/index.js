@@ -1,10 +1,10 @@
-import { Player } from "@/components";
+import { Players } from "./Players";
 
 export default function Home() {
   return (
     <div>
       <p> Hello world</p>
-      <Player player={Player} />
+      <Players />
     </div>
   );
 }
