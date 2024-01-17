@@ -1,4 +1,5 @@
 import { TrophyIcon } from "../utils/icons";
+// import "../styles/header.css";
 
 export function Header() {
   return (

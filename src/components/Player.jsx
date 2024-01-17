@@ -7,7 +7,6 @@ export function Player({ aScore, index, increaseScore, decreaseScore }) {
       <div className="playerScore">
         <button
           onClick={() => {
-            console.log("checking from Player index :", index);
             decreaseScore(index);
           }}
         >
