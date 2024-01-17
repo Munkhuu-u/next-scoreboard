@@ -1,6 +1,7 @@
 import Players from "./Players";
-import { Header } from "./Header";
-import { Features } from "./Features";
+import { Header, Features } from "@/components";
+// import { Gsdf } from "@/components/Gsdf";
+import { AddPlayerDiv } from "@/components/AddPlayerDiv";
 import { useState } from "react";
 import { players } from "../utils/players";
 
@@ -12,11 +13,12 @@ export default function Home() {
     <div>
       <Header />
       <Players score={score} setScore={setScore} />
+      <AddPlayerDiv />
       <Features
         score={score}
         setScore={setScore}
         tempDiv={tempDiv}
-        settempDiv={settempDiv}
+        setTempDiv={settempDiv}
       />
     </div>
   );

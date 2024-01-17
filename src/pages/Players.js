@@ -1,5 +1,4 @@
 import { Player } from "@/components";
-import { players } from "@/utils/players";
 
 const Players = ({ score, setScore }) => {
   const scoreUpdaterSorted = score.sort((a, b) => {
