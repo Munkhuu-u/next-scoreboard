@@ -1,26 +1,61 @@
 import { PlusIcon, MinusIcon } from "../utils/icons";
+import styles from "../styles/player.module.css";
 
-export function Player({ aScore, index, increaseScore, decreaseScore }) {
-  return (
-    <div className="player" key={index}>
-      <p>{aScore.playerName}</p>
-      <div className="playerScore">
-        <button
-          onClick={() => {
-            decreaseScore(index);
-          }}
-        >
-          <MinusIcon />
-        </button>
-        <span>{aScore.playerScore}</span>
-        <button
-          onClick={() => {
-            increaseScore(index);
-          }}
-        >
-          <PlusIcon />
-        </button>
+export function Player({ score, aScore, index, increaseScore, decreaseScore }) {
+  if (index != score.length - 1) {
+    return (
+      <div>
+        <div className={styles.player} key={index}>
+          <p className={styles.playerName}>{aScore.playerName}</p>
+          <div className={styles.playerScore}>
+            <button
+              className={styles.playerButton}
+              onClick={() => {
+                decreaseScore(index);
+              }}
+            >
+              <MinusIcon />
+            </button>
+            <p>{aScore.playerScore}</p>
+            <button
+              className={styles.playerButton}
+              onClick={() => {
+                increaseScore(index);
+              }}
+            >
+              <PlusIcon />
+            </button>
+          </div>
+        </div>
+        <div className="divider"></div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div>
+        <div className={styles.player} key={index}>
+          <p className={styles.playerName}>{aScore.playerName}</p>
+          <div className={styles.playerScore}>
+            <button
+              className={styles.playerButton}
+              onClick={() => {
+                decreaseScore(index);
+              }}
+            >
+              <MinusIcon />
+            </button>
+            <p>{aScore.playerScore}</p>
+            <button
+              className={styles.playerButton}
+              onClick={() => {
+                increaseScore(index);
+              }}
+            >
+              <PlusIcon />
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }

@@ -1,13 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-  display: flex;
-  flex-direction: column;
   margin: auto;
+  display: flex;
   width: 530px;
   padding: 32px;
-  gap: 80px;
+  flex-direction: column;
+  gap: 60px;
   flex-shrink: 0;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
-.header {
+/* .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -29,3 +38,7 @@
   justify-content: space-between;
   padding-right: 200px;
 }
+.divider {
+  height: 2px;
+  background-color: black;
+} */

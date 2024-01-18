@@ -1,0 +1,22 @@
+.features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.featureButton {
+  display: flex;
+  width: auto;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #14b166;
+
+  color: #fff;
+  font-family: GIP;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+}

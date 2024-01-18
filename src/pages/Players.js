@@ -1,4 +1,5 @@
 import { Player } from "@/components";
+import { players } from "@/utils/players";
 
 const Players = ({ score, setScore }) => {
   const scoreUpdaterSorted = score.sort((a, b) => {
@@ -18,18 +19,31 @@ const Players = ({ score, setScore }) => {
 
   function decreaseScore(index) {
     const scoreUpdater = [...score];
-    scoreUpdater[index].playerScore -= 1;
+    if (scoreUpdater[index].playerScore <= 0) {
+      scoreUpdater[index].playerScore;
+    } else {
+      scoreUpdater[index].playerScore -= 1;
+    }
+
     const scoreUpdaterSorted = scoreUpdater.sort((a, b) => {
       return b.playerScore - a.playerScore;
     });
     setScore(scoreUpdaterSorted);
   }
+  // score.filter((element) => {
+  //   if (element.playerName !== newName) {
+  //     return [...element];
+  //   } else {
+  //     return [...element, {}];
+  //   }
+  // });
 
   return (
     <div className="Scoreboard">
       {score.map((aScore, index) => {
         return (
           <Player
+            score={score}
             aScore={aScore}
             index={index}
             increaseScore={increaseScore}

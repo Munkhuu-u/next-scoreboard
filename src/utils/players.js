@@ -1,17 +1,17 @@
 export const players = [
   {
     id: 1,
-    playerName: "John jjig",
-    playerScore: 4,
+    playerName: "Munkhbat",
+    playerScore: 0,
   },
   {
     id: 2,
-    playerName: "John tom",
-    playerScore: 8,
+    playerName: "Temuulen",
+    playerScore: 0,
   },
   {
     id: 3,
-    playerName: "John dund",
-    playerScore: 5,
+    playerName: "Dashka",
+    playerScore: 0,
   },
 ];
