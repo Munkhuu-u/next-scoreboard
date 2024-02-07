@@ -46,8 +46,8 @@ export function Features({ score, setScore, tempDiv, setTempDiv }) {
   }
 
   return (
-    <div className="features">
-      <div className="feature1">
+    <div className={styles.features}>
+      <div className={styles.feature1}>
         <AddPlayerDiv
           Addfn={Addfn}
           tempName={tempName}
@@ -56,7 +56,7 @@ export function Features({ score, setScore, tempDiv, setTempDiv }) {
           nameBlank={nameBlank}
         />
       </div>
-      <div className={styles.features}>
+      <div className={styles.feature2}>
         <button class={styles.featureButton} onClick={showAddplayer}>
           Add player
         </button>

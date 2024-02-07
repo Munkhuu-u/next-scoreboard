@@ -1,6 +1,6 @@
 .features {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 .featureButton {
@@ -19,4 +19,16 @@
   font-style: normal;
   font-weight: 600;
   line-height: 135%;
+}
+.feature1{
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.feature2{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
